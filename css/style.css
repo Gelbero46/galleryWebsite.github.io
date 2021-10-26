@@ -153,6 +153,10 @@ body {
   color: #eee;
 }
 
+.footer--text > * + * {
+  margin-top: 2em;
+}
+
 .footer--text a {
   text-decoration: none;
   color: #777;
@@ -160,5 +164,6 @@ body {
 
 .footer--text a:hover {
   color: #34826e;
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
