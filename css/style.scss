@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+@font-face {
+  font-family: "monster-trucks-regular";
+  src: url("../font/monster-trucks/Monster\ Trucks.otf");
+}
+
+@font-face {
+  font-family: "Avenir next";
+  src: url("../font/avenir-next/folder/AvenirNextLTPro-Regular.otf");
+}
+
+:root {
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir next", Helvetica, sans-serif;
+  background-color: #eee;
+  background-image: url("../img/background.png"), radial-gradient(#777, #333);
+  background-blend-mode: multiply;
+}
+
+.truck-font {
+  font-family: "monster-trucks-regular", sans-serif;
+}
+
+.truck-light {
+  font-family: "Great Vibes", cursive;
+}
+.spacing > * + * {
+  margin-top: 1rem;
+}
+.btn {
+  padding: 0.5em 2.5em;
+  border-radius: 0;
+}
+
+.btn__small {
+  padding: 0.4em 1.8em;
+  font-size: 0.8rem;
+}
+
+.row {
+  --bs-gutter-y: 2rem;
+}
+.color-basic {
+  color: rgb(52, 130, 110);
+}
+
+.truck-color {
+  color: #111;
+}
+
+.text-shadow {
+  text-shadow: 0 0 0.2em rgba(240, 235, 235, 0.5);
+}
+
+.gallery {
+  height: 460px;
+  &--img {
+    display: block;
+    position: relative;
+    background-image: var(--background-img, url("../img/11_Toyota\ SUV.png"));
+    background-position: 50% 50%;
+    width: 100%;
+    height: 85%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &--info {
+    display: block;
+    position: relative;
+    height: auto;
+    text-align: center;
+    background-color: rgb(52, 130, 110);
+    color: #fff;
+    cursor: pointer;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+    p {
+      color: rgb(7, 82, 65);
+    }
+  }
+}
+
+.gallery__shade {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 500ms ease;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.gallery--img--11 {
+  --background-img: url("../img/11_Toyota\ SUV.png");
+}
+
+.gallery--img--9 {
+  --background-img: url("../img/9_Jeep\ wildlife.png");
+}
+
+.gallery--img--3 {
+  --background-img: url("../img/3_Jeep\ pickup.png");
+}
+
+.see--more {
+  text-align: center;
+}
+
+.footer {
+  background-color: rgba(17, 17, 17, 0.5);
+  font-size: 0.85rem;
+  &--text {
+    text-align: center;
+    padding: 2em 0;
+    color: #eee;
+
+    a {
+      text-decoration: none;
+      color: #777;
+      &:hover {
+        color: rgb(52, 130, 110);
+      }
+    }
+  }
+}
